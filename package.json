@@ -1,0 +1,24 @@
+{
+    "name": "nft-quickstart",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.0.4",
+        "@openzeppelin/contracts": "^4.4.0",
+        "dotenv": "^10.0.0",
+        "ethers": "^5.5.3",
+        "hardhat": "^2.8.2"
+    },
+    "scripts": {
+        "compile": "npx hardhat clean; npx hardhat compile",
+        "deploy-main": "npx hardhat run scripts/deploy.js --network mainnet",
+        "deploy-rinkeby": "npx hardhat run scripts/deploy.js --network rinkeby",
+        "deploy-local": "npx hardhat run scripts/deploy.js --network localhost",
+        "start-chain": "npx hardhat node",
+        "setup": "cp .env.templ .env; yarn;"
+    },
+    "engines": {
+        "node": "^16"
+    }
+}
